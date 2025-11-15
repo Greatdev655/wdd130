@@ -65,7 +65,7 @@ h1 {
     color: var(--secondary-color);
 }
 
-article {
+.hero article {
     position: absolute;
     padding:16px;
     background-color: var(--accent2-color);
