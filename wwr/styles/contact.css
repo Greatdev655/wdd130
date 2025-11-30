@@ -1,0 +1,388 @@
+:root {
+    --primary-color:#055a05;
+    --secondary-color:#f4a261;
+    --accent1-color:#264653;
+    --accent2-color:#e9c46a;
+    --heading-font:"Times New Roman",serif;
+    --body-font: Arial , helvetica, sans-serif; 
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    margin: .5rem auto;
+    color:var(--accent2-color);
+    display:grid;
+    grid-template-columns:auto auto;  /* for the logo and nav list  */
+    justify-content:center;
+    padding:1rem;
+    align-items: center;
+    max-width: 1000px;
+}
+
+header img {
+    width:50px;
+    margin-left:10px;
+}
+
+header, main, footer {
+    width:840px;
+    margin:0 auto;
+}
+
+h1,h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+nav,p,section,article {
+    margin:16px;
+    padding:8px;
+}
+
+nav ul{
+    display:flex;
+    flex-wrap: wrap;
+    list-style: none;
+    color:#fff;
+    text-decoration:none;
+     
+}
+
+nav ul li {
+    padding:.5rem;
+    flex:1 1 auto;
+    transition:color 2s ease;
+    cursor: pointer;
+    
+}
+
+nav ul a {
+    color:#fff;
+    text-decoration:none;
+}
+
+nav li :hover {
+    color: var(--accent2-color);
+
+}
+
+
+
+
+/* hero styling with overlay */
+
+.hero {
+    position:relative;  
+    justify-content:center;
+    align-items:center;
+}
+
+.hero img {
+    display: block;
+    width:100%;
+    height:auto;
+}
+
+.contact_heading {
+    width:100%;
+    text-align:center;
+    color: var(--primary-color);
+    margin-top:1rem;
+    }
+
+.hero article {
+    position: absolute;
+    padding:16px;
+    background-color: var(--accent2-color);
+    color:#000;
+    margin:1rem;
+    justify-content:center;
+    align-items:center;
+    top:32%;
+    width:95%;
+
+
+}
+
+.hero article img {
+    float:right;
+    width:125px;
+    margin:2px;
+    border:1px solid #fff;
+    box-shadow:8px 12px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------History---------------- */
+
+.history1{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    padding:.2rem;
+    max-width:100%;
+    position: relative;
+}
+
+.history_header{
+    grid-column:1/4;
+    text-align: center;
+    font-weight:bold;
+}
+
+.history_img{
+    width:300px;
+    height:auto;
+    margin-top:1.2rem;
+}
+
+.adventure1{
+    width:100%;
+    position: relative;
+}
+
+.adventure1_header {
+    text-align: center;
+    margin-bottom:.75rem;
+}
+
+.img_container{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}
+
+figure {
+    text-align: center;
+    font-size:10px;
+}
+
+figure img {
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    transition:transform 0.4s ease, border 0.4s ease;
+}
+
+figure:hover img{
+    transform: scale(1.05);
+    border:solid 1px var(--primary-color);
+}
+
+/* -----------------footer-------------------- */
+
+footer{
+    display:flex;
+    width:840px;
+    background-color: var(--primary-color);
+    color:#fff;
+    position:relative;
+    padding: 0.75em;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    font-size:10px;
+}
+
+.socialmedia{
+    display: flex;
+    flex-wrap:wrap;
+    padding:1rem;
+    color: #fff;
+    position:absolute;
+    right:5%;
+    margin-top:1rem;
+    gap:5px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+     color: #fff;
+}
+
+.socialmedia img {
+    width:25px;
+    min-height:25px;
+}
+
+.para{
+    text-align: center;
+    margin:none;
+}
+
+
+
+
+/*---------------------------- contact form---------------------------  */
+
+
+.contact-container{
+    display:flex;
+    flex-direction:row;
+    gap:2rem;
+    align-items: flex-start;
+    margin:2rem auto;
+    max-width:1200px;
+    padding:0 20px;
+
+}
+
+
+.map_container iframe {
+    width:100%;
+    height:750px;
+    border: none;
+    border-radius:3px;
+}
+
+.map_container{
+    flex:1;
+}
+
+.contact-form{
+    flex:1;
+}
+
+
+
+.contact-form {
+    display: grid;
+    grid-template-columns:2fr;
+    gap: 15px 20px; /* Row Gap: 15px, Column Gap: 20px */
+    width:100%;
+    max-width: 500px; /* Restrict width to match image */
+    align-items: center; /* Vertically center labels with inputs */
+    padding:1rem;
+}
+
+.contact_list{
+    display:flex;
+    gap:10px;
+    margin-bottom:8px;
+}
+
+/* 3. Typography & Labels */
+.form-label {
+    font-size: 14px;
+    font-weight: 600; /* Semi-bold to match image */
+    color: #333;
+    white-space: nowrap; /* Prevent label wrapping */
+}
+
+/* Align the "Message Purpose" label to the top because the radios are tall */
+.align-top {
+    align-self: start;
+    margin-top: 2px; 
+}
+
+/* 4. Inputs (Text & Email) */
+.form-input {
+    width: 100%;
+    padding:1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* 5. Radio Button Group */
+.radio-group {
+    display: flex;
+    flex-direction: column; /* Stacks radios vertically */
+    gap: 8px;
+}
+
+.radio-option {
+    font-size: 13px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Custom alignment for radio circle */
+.radio-option input[type="radio"] {
+    margin: 0;
+    accent-color: #000; /* Makes selection black/dark grey */
+}
+
+/* 6. Layout Utilities for Grid Spanning */
+
+/* Forces an element to span both grid columns (start at 1, go to end) */
+.full-width-label {
+    grid-column: 1 / -1;
+    margin-bottom: -10px; /* Pulls textarea closer to label */
+}
+
+.full-width-input {
+    grid-column: 1 / -1;
+}
+
+/* 7. Specific Element Styling */
+
+/* Textarea specific height */
+textarea.form-input {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+/* Checkbox Row */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.checkbox-container label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    margin:.75rem .2rem;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding:1rem;
+    background-color:var(--primary-color); /* Light grey background */
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size:1rem;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width:100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent1-color);
+}
+
+
+
+
+
+

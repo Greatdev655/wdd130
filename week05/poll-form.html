@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/poll-form.css">
+    <title>poll-form</title>
+</head>
+<body>
+
+    <header>
+        <h1>WDD130| HTML FORM - USER POLL</h1>
+    </header>
+
+    <main>
+    <!-- creating the form -->
+
+   
+
+    <form action="">
+         <h1>Contact info</h1>
+        <div class="form-item column2">
+            <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-item column2">
+            <label for="email">Email:</label>
+        <input type="email" name="useremail" id="useremail" required>
+
+        </div>
+        <h1>Questions</h1>
+        <div class="form-item column1">
+            <label for="browser">what is your favorite browser?</label>
+        <select name="browser" id="browser" value="browser">
+            <option value="browser">chrome</option>
+            <option value="browser">Microsoft edge </option>
+            <option value="browser">Safari</option>
+        </select>
+        </div>
+       <div class="form-item column1">
+         <label for="pet">Do You have a Pet?</label>
+        <input type="checkbox" name="pet" id="pet">
+       </div>
+        <label for="feedback">List the places that you have lived</label>
+        <textarea name="feedback" id="feedback" placeholder="Enter List of places you've lived in"></textarea>
+        <button type="submit">Submit poll</button>
+    </form>
+
+    </main>
+
+    <footer>
+        <p>&copy 2025 | HTML FORM- User poll activity|Ikechukwu Great</p>
+     </footer>
+</body>
+</html>
