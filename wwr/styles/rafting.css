@@ -18,6 +18,11 @@ body{
     color: var(--accent1-color);
 }
 
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
 header {
     background-color: var(--primary-color);
     margin: .5rem auto;
@@ -56,6 +61,7 @@ nav ul{
     list-style: none;
     color:#fff;
     text-decoration:none;
+    justify-content: space-around;
      
 }
 
@@ -86,6 +92,7 @@ nav li :hover {
     position:relative;  
     justify-content:center;
     align-items:center;
+    background-blend-mode:multiply;
 }
 
 .hero img {
@@ -105,6 +112,22 @@ h1 {
     color: var(--secondary-color);
 }
 
+.hero_heading{
+    color:#fff;
+    background-color: #000;
+    top:50px;
+    right:70px;
+    position: absolute;
+    width:80%;
+    text-align:center;
+    padding:1rem;
+    border:1px dotted #fff;
+    
+}
+
+
+
+
 .hero article {
     position: absolute;
     padding:16px;
@@ -116,6 +139,37 @@ h1 {
     top:32%;
     width:95%;
 
+
+}
+
+#hero_para{
+    position: absolute;
+    top:25%;
+    left: 32%;
+    color:#fff;
+    margin-bottom:25px;
+
+}
+
+.book_btn{
+    position: absolute;
+    color:#fff;
+    display: block;
+    top:35%;
+    left:40%;
+    background: var(--primary-color);
+    padding: .65rem 2rem;
+    border:1px solid rgba(0, 0, 0, 0.1);
+    border-radius:.65rem;
+    font-size:1em;
+    cursor: pointer;
+    transition: 2s background ease;
+
+}
+
+.book_btn:hover{
+    background: var(--accent1-color);
+    color: #000;
 
 }
 
@@ -151,7 +205,9 @@ h1 {
 
 .adventure1{
     width:100%;
+    max-width: 1000px;
     position: relative;
+    background: #fbfbfbb8;
 }
 
 .adventure1_header {
@@ -166,16 +222,29 @@ h1 {
     gap:20px;
 }
 
+/* for home page  */
+
+.img_containers{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:25px;
+    padding: 2rem;
+
+}
+
 figure {
     text-align: center;
     font-size:10px;
+
 }
 
 figure img {
     width:100%;
     height:auto;
-    border-radius:10px;
+    border-radius:3px;
     transition:transform 0.4s ease, border 0.4s ease;
+    margin-bottom: .5rem;
 }
 
 figure:hover img{
@@ -221,6 +290,133 @@ footer p {
     width:25px;
     min-height:25px;
 }
+
+/* news letter sign up form */
+
+/* Newsletter Form Container */
+.newsletter-signup {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.newsletter-signup h2 {
+    color:var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+#newsletterForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: var(--heading-font); /* Highlight focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: var(--primary-color); /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent1-color);
+}
+
+.privacy-note {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* ................trip description ......................... */
+
+.trip_header{
+    text-align: center;
+    font-weight: 900;
+    font-family: fantasy, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top:.75rem;
+    margin-bottom: .75rem;
+}
+
+.img_para{
+    background: #fbfbfb;
+    padding:.75rem;
+    color: #000;
+    border-radius: 8px;
+    box-shadow:0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 1s border ease;
+}
+
+.img_para:hover{
+    border:1px solid var(--primary-color);
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 80%;
+    padding:1rem;
+    margin:0 auto;
+}
+
+th{
+    font-weight: 800;
+}
+
+th,
+td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    text-align: center;
+    padding:.75rem;
+}
+
+thead th,
+tfoot tr {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 200;
+}
+
 
 
 
